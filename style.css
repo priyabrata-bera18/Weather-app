@@ -1,0 +1,277 @@
+/* Reset + Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #ffffff;
+  background: linear-gradient(#4D79FF, #71C9F8);
+  /* background: #1a1a1a; */
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 570px;
+  height: auto;
+  padding: 20px;
+  margin-top: 1rem;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  transition: 0.4s ease-in-out;
+}
+
+
+/* Greeting */
+#greet {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Search area */
+.search-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.search-area input {
+  padding: 10px;
+  width: 20rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-area button {
+  padding: 10px;
+  width: 80px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  background: #ffffff;
+  color: #1f4aff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Date + Time */
+.date-time {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.date-time p {
+  font-size: 16px;
+  margin: 3px 0;
+}
+
+/* Main Weather Card */
+.weather-card {
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  transition: 0.4s ease;
+}
+
+.main-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.weather-icon {
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.4));
+}
+
+
+#temperature {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+
+#location {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+#temperature {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.icon-box {
+  margin: 10px 0;
+}
+
+.icon-box img {
+  width: 70px;
+}
+
+/* Small details text */
+#details {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Hourly Forecast Layout */
+.hourly {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.hour-box {
+  background: rgba(255, 255, 255, 0.18);
+  padding: 6px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 60px;
+  font-size: 13px;
+}
+
+/* Weekly Forecast */
+.weekly {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  overflow-x: auto;
+  margin-bottom: 50px;
+}
+
+.week-box {
+  background: rgba(255, 255, 255, 0.18);
+  width: 90px;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.week-box img {
+  width: 45px;
+}
+
+/* Responsive for Mobiles */
+@media (max-width: 480px) {
+  
+  body {
+    padding: 10px;
+  }
+
+  .main {
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  #greet {
+    font-size: 22px;
+  }
+
+  .search-area input {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .search-area button {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .date-time p {
+    font-size: 14px;
+  }
+
+  .weather-card {
+    width: 100%;
+    padding: 14px;
+  }
+
+  #location {
+    font-size: 18px;
+  }
+
+  #temperature {
+    font-size: 28px;
+  }
+
+  .weather-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Hourly Forecast */
+  .hour-box {
+    min-width: 50px;
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  /* Weekly Forecast */
+  .week-box {
+    width: 70px;
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .week-box img {
+    width: 35px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  #temperature {
+    font-size: 24px;
+  }
+}

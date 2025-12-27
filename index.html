@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Weather App</h1>
+    <!-- Greeting -->
+
+    <div class="main">
+        <h1 id="greet" style="margin-top: 2rem;">It's Night</h1>
+
+        <!-- Search Section -->
+        <div class="search-area">
+            <input id="cityInput" placeholder="Enter a city name...">
+            <button onclick="getWeather()" id="btn">Search</button>
+        </div>
+
+        <!-- Date & Time -->
+        <div class="date-time">
+            <p id="cur_date"></p>
+            <p id="cur_time"></p>
+        </div>
+
+        <!-- Main Weather Card -->
+        <div class="weather-card" id="weatherCard">
+            <h3 id="location"></h3>
+            <div class="main-weather">
+                <img id="weatherIcon" class="weather-icon" src="icons/moon-and-stars.png">
+                <p id="temperature"></p>
+            </div>
+
+
+            <p id="results"></p>
+
+            <p id="details"></p>
+        </div>
+
+        <!-- Hourly Forecast -->
+        <h3 class="section-title">Hourly Forecast</h3>
+        <div class="hourly" id="hourly"></div>
+
+        <!-- Weekly Forecast -->
+        <h3 class="section-title">Weekly Forecast</h3>
+        <div class="weekly" id="weekly"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
